@@ -188,10 +188,6 @@
             to { transform: translateX(var(--move)) scale(1.1); }
         }
 
-        html, body {
-            overflow-y: auto;
-            height: auto;
-        }
         .text-justified { text-align: justify; text-justify: inter-word; }
     </style>
 </head>
@@ -354,7 +350,7 @@ document.addEventListener("click", function () {
 </script>
 
     <script>
-        const music = document.getElementById('musik');
+        const music = document.getElementById('bgMusic');
         const intro = document.getElementById('intro');
         const musicIcon = document.getElementById('music-icon');
         const musicText = document.getElementById('music-text');
@@ -362,7 +358,7 @@ document.addEventListener("click", function () {
 
         function startEverything() {
             if (musicStarted) return;
-            document.body.style.overflow = 'auto';
+            
             musicStarted = true;
             musicText.innerText = 'Sedang Memuat Musik...';
             music.volume = 0.5;
@@ -384,7 +380,8 @@ document.addEventListener("click", function () {
             }, 1000);
         }
 
-        document.getElementById('intro').addEventListener('click', startEverything);
+        window.addEventListener('click', startEverything);
+        window.addEventListener('touchstart', startEverything);
 
         function createParticle() {
             const container = document.getElementById('particle-box');
@@ -442,4 +439,4 @@ document.addEventListener("click", function () {
         }
     </script>
 </body>
-</html>
+</html> ini kode aku

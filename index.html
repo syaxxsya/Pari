@@ -13,14 +13,9 @@
             --bg-gradient: linear-gradient(180deg, #fff5f7 0%, #ffffff 100%);
         }
 
-        /* Perbaikan Scroll HP */
-        html, body {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden; 
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
+        /* Fix Scroll untuk HP & Laptop */
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -28,7 +23,13 @@
             background: var(--bg-gradient);
             color: #555;
             cursor: pointer;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            min-height: 100vh;
+            width: 100%;
             position: relative;
+            -webkit-overflow-scrolling: touch;
         }
 
         .cursive { font-family: 'Dancing Script', cursive; }
@@ -220,7 +221,7 @@
         <p class="cute-font text-pink-400 italic">Dengarkan pesan dariku</p>
     </div>
 
-    <main class="relative z-10 w-full overflow-visible">
+    <main class="relative z-10 w-full">
         <!-- Section 1: Intro -->
         <section class="min-h-screen flex flex-col items-center justify-center p-6 text-center">
             <div class="reveal active">
@@ -245,25 +246,25 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                     <!-- Foto 1 -->
                     <div class="photo-frame" style="--rotation: -3deg">
-                        <img id="p1" src="https://lh3.googleusercontent.com/d/1abyspFdSAMT7ji-DT4iWERq0M64N1Xf4" alt="Kenangan 1" class="photo-img">
+                        <img src="https://lh3.googleusercontent.com/d/1abyspFdSAMT7ji-DT4iWERq0M64N1Xf4" alt="Kenangan 1" class="photo-img">
                         <p class="cute-font text-center mt-3 text-[10px] md:text-xs text-gray-400">Saat Kamu Sentuh Aku</p>
                     </div>
                     
                     <!-- Foto 2 -->
                     <div class="photo-frame" style="--rotation: 4deg">
-                        <img id="p2" src="https://lh3.googleusercontent.com/d/1ZBnJd53-gDGfpJNWoovhzgdQOjTbYXOn" alt="Kenangan 2" class="photo-img">
+                        <img src="https://lh3.googleusercontent.com/d/1ZBnJd53-gDGfpJNWoovhzgdQOjTbYXOn" alt="Kenangan 2" class="photo-img">
                         <p class="cute-font text-center mt-3 text-[10px] md:text-xs text-gray-400">Pas Kamu Selalu Punya Cara Bikin Aku Senang</p>
                     </div>
 
                     <!-- Foto 3 -->
                     <div class="photo-frame" style="--rotation: -5deg">
-                        <img id="p3" src="https://lh3.googleusercontent.com/d/1GTmM0OZp89x5g_Cskin0cnZetuwJ0x4y" alt="Kenangan 3" class="photo-img">
+                        <img src="https://lh3.googleusercontent.com/d/1GTmM0OZp89x5g_Cskin0cnZetuwJ0x4y" alt="Kenangan 3" class="photo-img">
                         <p class="cute-font text-center mt-3 text-[10px] md:text-xs text-gray-400">Saat Kamu Nurutin Kemauan Aku</p>
                     </div>
 
                     <!-- Foto 4 -->
                     <div class="photo-frame" style="--rotation: 2deg">
-                        <img id="p4" src="https://lh3.googleusercontent.com/d/1WoofcLurX7eCFqWXYw11QOesnjUnzlKR" alt="Kenangan 4" class="photo-img">
+                        <img src="https://lh3.googleusercontent.com/d/1WoofcLurX7eCFqWXYw11QOesnjUnzlKR" alt="Kenangan 4" class="photo-img">
                         <p class="cute-font text-center mt-3 text-[10px] md:text-xs text-gray-400">Sayang kamu selamanya Papari</p>
                     </div>
                 </div>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -14,14 +13,22 @@
             --bg-gradient: linear-gradient(180deg, #fff5f7 0%, #ffffff 100%);
         }
 
+        /* Perbaikan Scroll HP */
+        html, body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; 
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
         body {
             font-family: 'Quicksand', sans-serif;
             background: var(--bg-gradient);
-            overflow-x: hidden;
-            margin: 0;
-            padding: 0;
             color: #555;
             cursor: pointer;
+            position: relative;
         }
 
         .cursive { font-family: 'Dancing Script', cursive; }
@@ -52,7 +59,7 @@
             100% { transform: translateY(110vh) rotate(360deg) translateX(20px); }
         }
 
-        /* Doll Animations (Bear & Bunny) */
+        /* Doll Animations */
         .character-container {
             display: flex;
             gap: 40px;
@@ -131,7 +138,7 @@
             box-shadow: 0 8px 20px rgba(255, 143, 163, 0.3);
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-         /* Foto Frame Styling */
+
         .photo-frame {
             background: rgb(255, 225, 225);
             padding: 12px 12px 30px 12px;
@@ -213,7 +220,7 @@
         <p class="cute-font text-pink-400 italic">Dengarkan pesan dariku</p>
     </div>
 
-    <main class="relative z-10">
+    <main class="relative z-10 w-full overflow-visible">
         <!-- Section 1: Intro -->
         <section class="min-h-screen flex flex-col items-center justify-center p-6 text-center">
             <div class="reveal active">
@@ -222,61 +229,56 @@
                     <div class="text-5xl animate-bounce">💖</div>
                     <div class="doll bunny"><div class="eye left"></div><div class="eye right"></div></div>
                 </div>
-                <h1 class="text-6xl md:text-8xl cursive text-pink-600 mb-6 leading-tight">Maafin Aku Ya Sayang</h1>
-                <p class="text-2xl cute-font text-pink-400 max-w-2xl mx-auto italic">
+                <h1 class="text-5xl md:text-8xl cursive text-pink-600 mb-6 leading-tight">Maafin Aku Ya Sayang</h1>
+                <p class="text-xl md:text-2xl cute-font text-pink-400 max-w-2xl mx-auto italic">
                     "Sebuah ungkapan tulus untuk orang paling sabar sedunia..."
                 </p>
             </div>
         </section>
-        <!-- Section Galeri Foto (Google Drive Links Updated) -->
+
+        <!-- Section Galeri Foto -->
         <section class="py-20 px-6">
             <div class="max-w-5xl mx-auto">
                 <h2 class="text-5xl cursive text-center text-pink-500 mb-4">Kenangan Kita</h2>
                 <p class="text-center cute-font text-gray-400 mb-16">Momen yang paling berharga buat aku</p>
                 
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <!-- Foto 1 - Menggunakan Direct Link -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                    <!-- Foto 1 -->
                     <div class="photo-frame" style="--rotation: -3deg">
-                        <img id="p1" src="https://i.imgur.com/FPIU8Ju.jpeg" alt="Kenangan 1" class="photo-img">
-                        <p class="cute-font text-center mt-3 text-xs text-gray-400">Saat Kamu Sentuh Aku</p>
+                        <img id="p1" src="https://lh3.googleusercontent.com/d/1abyspFdSAMT7ji-DT4iWERq0M64N1Xf4" alt="Kenangan 1" class="photo-img">
+                        <p class="cute-font text-center mt-3 text-[10px] md:text-xs text-gray-400">Saat Kamu Sentuh Aku</p>
                     </div>
                     
-                    <!-- Foto 2 - Menggunakan Direct Link -->
+                    <!-- Foto 2 -->
                     <div class="photo-frame" style="--rotation: 4deg">
-                        <img id="p2" src="https://i.imgur.com/gujxrTJ.jpeg" alt="Kenangan 2" class="photo-img">
-                        <p class="cute-font text-center mt-3 text-xs text-gray-400">Pas Kamu Selalu Punya Cara Bikin Aku Senang</p>
+                        <img id="p2" src="https://lh3.googleusercontent.com/d/1ZBnJd53-gDGfpJNWoovhzgdQOjTbYXOn" alt="Kenangan 2" class="photo-img">
+                        <p class="cute-font text-center mt-3 text-[10px] md:text-xs text-gray-400">Pas Kamu Selalu Punya Cara Bikin Aku Senang</p>
                     </div>
 
-                    <!-- Foto 3 - Menggunakan Direct Link -->
+                    <!-- Foto 3 -->
                     <div class="photo-frame" style="--rotation: -5deg">
-                        <img id="p3" src="https://i.imgur.com/0ZTSVQ0.jpeg" alt="Kenangan 3" class="photo-img">
-                        <p class="cute-font text-center mt-3 text-xs text-gray-400">Saat Kamu Nurutin Kemauan Aku</p>
+                        <img id="p3" src="https://lh3.googleusercontent.com/d/1GTmM0OZp89x5g_Cskin0cnZetuwJ0x4y" alt="Kenangan 3" class="photo-img">
+                        <p class="cute-font text-center mt-3 text-[10px] md:text-xs text-gray-400">Saat Kamu Nurutin Kemauan Aku</p>
                     </div>
-                    <!-- Foto 4 - Menggunakan Direct Link -->
+
+                    <!-- Foto 4 -->
                     <div class="photo-frame" style="--rotation: 2deg">
-                        <img id="p4" src="https://i.imgur.com/wegWK8J.jpeg" alt="Kenangan 4" class="photo-img">
-                        <p class="cute-font text-center mt-3 text-xs text-gray-400">Sayang kamu selamanya Papari</p>
+                        <img id="p4" src="https://lh3.googleusercontent.com/d/1WoofcLurX7eCFqWXYw11QOesnjUnzlKR" alt="Kenangan 4" class="photo-img">
+                        <p class="cute-font text-center mt-3 text-[10px] md:text-xs text-gray-400">Sayang kamu selamanya Papari</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Section 2: Surat Panjang -->
-        <section class="py-20 px-6 max-w-4xl mx-auto">
+        <section class="py-10 px-6 max-w-4xl mx-auto">
             <div class="card-glass p-8 md:p-16 reveal">
-                <h2 class="text-5xl cursive text-center text-pink-500 mb-12">Surat Dari Lubuk Hatiku</h2>
-                <div class="space-y-6 text-lg md:text-xl cute-font text-gray-600 leading-relaxed text-justified">
+                <h2 class="text-4xl md:text-5xl cursive text-center text-pink-500 mb-12">Surat Dari Lubuk Hatiku</h2>
+                <div class="space-y-6 text-base md:text-xl cute-font text-gray-600 leading-relaxed text-justified">
                     <p>Halo sayangku, <b>Papari Dede</b>...</p>
-                    
-                    <p>Aku menulis ini dengan perasaan yang sangat campur aduk, tapi yang paling utama adalah rasa bersalah yang besar. Aku benar-benar ingin minta maaf dari hati yang paling dalam. Aku sadar banget, akhir-akhir ini emosiku sering nggak stabil, sering marah-marah nggak jelas, dan terkadang malah kamu yang jadi sasarannya.</p>
-
-                    <p>Padahal aku tahu, kamu sudah capek dengan duniamu sendiri, tapi kamu tetap berusaha memberikan senyum terbaik buat aku. Maafin aku karena belum bisa jadi pasangan yang sedewasa kamu. Maafin aku karena egois dan sering membiarkan suasana indah kita hancur cuma karena kekanak-kanakanku.</p>
-
-                    <p>Terima kasih ya, sudah menjadi satu-satunya orang yang paling mengerti aku. Terima kasih sudah tidak pernah menyerah meskipun aku sulit dihadapi. Kamu bukan cuma sekadar pacar, kamu itu pelindung, rumah, dan alasan kenapa aku selalu ingin menjadi orang yang lebih baik setiap harinya.</p>
-
+                    <p>Aku menulis ini dengan perasaan yang sangat campur aduk, tapi yang paling utama adalah rasa bersalah yang besar. Aku benar-benar ingin minta maaf dari hati yang paling dalam...</p>
                     <p>Aku janji akan terus belajar mengontrol diri. Aku ingin kita bahagia terus, tanpa ada tangis atau luka yang aku buat sendiri. Kamu terlalu berharga untuk aku sia-siakan cuma karena emosi sesaat.</p>
-                    
-                    <p class="text-center text-2xl cursive text-pink-600 font-bold mt-10 animate-pulse">
+                    <p class="text-center text-xl md:text-2xl cursive text-pink-600 font-bold mt-10 animate-pulse">
                         "Maukah kamu memaafkan si keras kepala ini dan mulai lagi dengan senyuman?" 🥺🌸
                     </p>
                 </div>
@@ -285,9 +287,9 @@
 
         <!-- Section 3: 20 Hal Yang Disukai -->
         <section class="py-20 px-6 max-w-5xl mx-auto">
-            <div class="card-glass p-12 reveal border-pink-100">
-                <h2 class="text-5xl cursive text-pink-500 text-center mb-16">20 Hal Yang Aku Suka Darimu</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 cute-font text-lg text-gray-700">
+            <div class="card-glass p-8 md:p-12 reveal border-pink-100">
+                <h2 class="text-4xl md:text-5xl cursive text-pink-500 text-center mb-16">20 Hal Yang Aku Suka Darimu</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 cute-font text-sm md:text-lg text-gray-700">
                     <div class="flex items-center gap-3 p-3 bg-white/40 rounded-2xl">🧸 <span>Kesabaranmu yang seluas samudera.</span></div>
                     <div class="flex items-center gap-3 p-3 bg-white/40 rounded-2xl">🧸 <span>Caramu tersenyum meskipun lagi capek.</span></div>
                     <div class="flex items-center gap-3 p-3 bg-white/40 rounded-2xl">🧸 <span>Wangi khas kamu yang selalu bikin tenang.</span></div>
@@ -314,10 +316,10 @@
 
         <!-- Section 4: Tombol Keputusan -->
         <section class="min-h-screen flex flex-col items-center justify-center p-6 text-center">
-            <div class="card-glass p-12 md:p-16 reveal max-w-2xl w-full">
-                <h2 class="text-5xl cursive text-pink-600 mb-12">Jadi, Mau Baikan Kan? 🥺</h2>
+            <div class="card-glass p-10 md:p-16 reveal max-w-2xl w-full">
+                <h2 class="text-4xl md:text-5xl cursive text-pink-600 mb-12">Jadi, Mau Baikan Kan? 🥺</h2>
                 <div class="flex flex-col sm:flex-row gap-8 justify-center items-center">
-                    <button onclick="accept()" class="btn-romantis px-16 py-6 font-bold rounded-full text-2xl w-full sm:w-auto">
+                    <button onclick="accept()" class="btn-romantis px-10 md:px-16 py-4 md:py-6 font-bold rounded-full text-xl md:text-2xl w-full sm:w-auto">
                         IYA, SAYANG! ❤️
                     </button>
                     <button id="noBtn" onmouseover="dodge()" onclick="dodge()" class="px-10 py-4 bg-white text-gray-300 rounded-full border border-pink-50 transition-all text-lg">
@@ -334,23 +336,18 @@
             <div class="doll bear" id="final-bear"><div class="eye left"></div><div class="eye right"></div></div>
             <div class="doll bunny" id="final-bunny"><div class="eye left"></div><div class="eye right"></div></div>
         </div>
-        <h2 class="text-7xl cursive text-pink-600 mb-8">Horeee! ❤️</h2>
-        <p class="text-3xl cute-font text-gray-600 mb-12">Aku sayang kamu Sayangku Cintaku Gantengku Papari Dede! 🤗✨</p>
+        <h2 class="text-5xl md:text-7xl cursive text-pink-600 mb-8">Horeee! ❤️</h2>
+        <p class="text-xl md:text-3xl cute-font text-gray-600 mb-12">Aku sayang kamu Sayangku Cintaku Gantengku Papari Dede! 🤗✨</p>
         <button onclick="location.reload()" class="bg-pink-500 text-white px-12 py-4 rounded-full font-bold text-xl">Mulai Lagi</button>
     </div>
 
+    <!-- Audio Element -->
     <audio id="musik" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-document.addEventListener("click", function () {
-  document.getElementById("musik").play();
-}, { once: true });
-</script>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
 
     <script>
-        const music = document.getElementById('bgMusic');
+        const music = document.getElementById('musik');
         const intro = document.getElementById('intro');
         const musicIcon = document.getElementById('music-icon');
         const musicText = document.getElementById('music-text');
@@ -358,26 +355,19 @@ document.addEventListener("click", function () {
 
         function startEverything() {
             if (musicStarted) return;
-            
             musicStarted = true;
-            musicText.innerText = 'Sedang Memuat Musik...';
+            
             music.volume = 0.5;
-
-            const playPromise = music.play();
-            if (playPromise !== undefined) {
-                playPromise.then(() => {
-                    musicIcon.innerText = '🎵';
-                    musicText.innerText = 'Lagu Sedang Diputar...';
-                }).catch(error => {
-                    musicText.innerText = 'Musik Gagal Diputar';
-                });
-            }
+            music.play().then(() => {
+                musicIcon.innerText = '🎵';
+                musicText.innerText = 'Lagu Sedang Diputar...';
+            }).catch(e => {
+                musicText.innerText = 'Musik Gagal Diputar';
+            });
 
             intro.style.opacity = '0';
             intro.style.pointerEvents = 'none';
-            setTimeout(() => {
-                intro.style.visibility = 'hidden';
-            }, 1000);
+            setTimeout(() => intro.style.visibility = 'hidden', 1000);
         }
 
         window.addEventListener('click', startEverything);
@@ -439,4 +429,4 @@ document.addEventListener("click", function () {
         }
     </script>
 </body>
-</html> ini kode aku
+</html>
